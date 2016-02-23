@@ -11,7 +11,7 @@
   <ul>
     {% for pr in product %}
       <li>
-        {{ pr.name }} | {{pr.description}}
+        <a href="{% url 'products.views.product_detail' pk=pr.pk %}">{{ pr.name }} </a>| {{pr.description}}
         <img src="{{pr.image.url}}" alt="" />
       </li>
     {% endfor %}
